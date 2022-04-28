@@ -1,6 +1,10 @@
 package com.yeshanqiu.major;
+/**
+ * Created by IntelliJ IDEA.
+ * &#064;author: 夜芟秋
+ * &#064;Created: 2022/4/26 11:22
+ */
 
-import com.yeshanqiu.major.School;
 
 public class Student {
     School sc=new School("计算机科学与应用","J0001",4);
@@ -9,16 +13,14 @@ public class Student {
     int age;
     int number;
     String gender;
-    String major;
-    int year;
+    static String subject="计算机科学与应用";
+    static int years=4;
     //构造方法
     public Student(String name, int age, int number, String gender){
         this.name = name;
         this.age = age;
         this.number = number;
         this.gender = gender;
-        this.major = sc.getName();
-        this.year = sc.getYears();
     }
 
     public String getName() {
@@ -54,13 +56,7 @@ public class Student {
     }
 
     public String toString() {
-        return "Student{" +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", number=" + number +
-                ", gender='" + gender + '\'' +
-                ", major='" + major + '\'' +
-                ", year=" + year +
-                '}';
+        System.out.println("====================");
+        return "姓名："+name+"\n性别："+gender+"\n学号："+number+"\n年龄："+age+"\n所选专业："+subject+"\n学制年限："+years;
     }
 }
